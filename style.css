@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.header {
+    display: flex;                
+    align-items: center;          
+    justify-content: center;      
+    gap: 1rem;                    
+    background: linear-gradient(90deg, #f8c3f8, #e0b3ff, #f5b4f2);
+    background-size: 200% 200%;
+    animation: gradientMove 6s ease infinite;
+    color: #6a4f9c;
+    padding: 0.8rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.05);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #6a4f9c;
+    letter-spacing: 1px;
+    text-align: center;
+    flex: 1; 
+}
+
+.header__logo {
+    height: 50px;      
+    width: auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+aside {
+    background: linear-gradient(180deg, #ffe0eb, #ffd6e5);
+    padding: 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #3a0808;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.formProyecto__element {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.formProyecto__element input, .formProyecto__element textarea {
+    background-color: #fff5f7;
+    padding: 0.4rem;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.formProyecto__element input:focus, .formProyecto__element textarea:focus {
+    border: 1px solid #f5a9bc;
+    box-shadow: 0 0 6px rgba(245, 169, 188, 0.3);
+}
+
+.formProyecto__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.formProyecto__button button {
+    background: linear-gradient(90deg, #f88ebc, #f5a9bc);
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.formProyecto__button button:hover {
+    background: linear-gradient(90deg, #f99ac0, #f7b0c3);
+    transform: translateY(-2px);
+}
+
+.formProyecto__button button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transition: left 0.4s ease;
+}
+
+.formProyecto__button button:hover::after {
+    left: 100%;
+}
+
+section {
+    background: #fff7e5;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.projects__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project {
+    background: linear-gradient(135deg, #fff1c1, #ffe0f0);
+    border-radius: 15px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.project h3, .project p strong {
+    font-family: 'Poppins', sans-serif;
+    color: #d49edc;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project h3:hover {
+    color: #c07fd8;
+    text-shadow: 0 1px 3px rgba(192,127,216,0.3);
+}
+
+.projects__section {
+    padding: 0.3rem 0 0.3rem 1rem;
+}
+
+.projects__section ul {
+    padding-left: 1rem;
+    list-style-type: circle;
+    color: #333;
+}
+
+.project a {
+    color: #d49edc;
+    text-decoration: underline;
+}
+
+footer {
+    background: linear-gradient(90deg, #f8c3f8, #e7b8f5);
+    border-top: 2px solid rgba(255,255,255,0.6);
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #3a0808;
+}
+
